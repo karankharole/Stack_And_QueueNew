@@ -28,6 +28,27 @@ namespace StackAndQueueNew
             top = newNode;
             Console.WriteLine("{0} pushed to stack", data);
         }
+
+        public void pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Console.WriteLine("Popped Element = " + top.value);
+            top = top.next;
+        }
+
+        public void peak()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Peak element is :" + top.value);
+        }
         public void Display()
         {
 
@@ -42,7 +63,7 @@ namespace StackAndQueueNew
             }
             while (temp != null)
             {
-                Console.WriteLine($" {i} Element in Stack is : " + temp.data);
+                Console.WriteLine($" {i} Element in Stack is : " + temp.value);
                 temp = temp.next;
                 Size = i;
                 i++;
